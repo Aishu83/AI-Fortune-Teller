@@ -1,0 +1,116 @@
+/* Background Stars */
+.stars, .stars2, .stars3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background: transparent;
+  z-index: -1;
+  background-repeat: repeat;
+}
+
+.stars {
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveStars 200s linear infinite;
+}
+.stars2 {
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 100px 100px;
+  animation: moveStars 400s linear infinite;
+  opacity: 0.5;
+}
+.stars3 {
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 150px 150px;
+  animation: moveStars 600s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes moveStars {
+  0% { background-position: 0 0; }
+  100% { background-position: 10000px 10000px; }
+}
+
+/* Bot Animation */
+.bot-container {
+  position: fixed;
+  top: 40px;
+  right: 30px;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+.bot {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Main Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #000428, #004e92);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  transition: background 1s ease;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 90%;
+  max-width: 500px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 10px;
+  border: none;
+  margin: 15px 0;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 12px;
+  background-color: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff4757;
+}
+
+#responseBox {
+  margin-top: 30px;
+  font-size: 1.4em;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

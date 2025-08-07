@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Fortune Teller 🔮</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <!-- Floating Bot -->
+  <div class="bot-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Bot Face" class="bot" />
+  </div>
+
+  <div class="container">
+    <h1>AI Fortune Teller 🔮</h1>
+    <p>Ask your question, and the AI Oracle shall reveal your future...</p>
+
+    <input type="text" id="questionInput" placeholder="Type your question here..." />
+    <button onclick="getFortune()">Ask the Oracle</button>
+
+    <div id="responseBox" class="hidden">
+      <p id="aiResponse"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
